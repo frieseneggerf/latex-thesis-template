@@ -2,8 +2,9 @@
 # LaTeX Thesis Template
 
 Template for easily getting started with writing a good looking thesis using LaTeX.
+(With Ludwig-Maximilans-University Munich seal and header, but this can easily be adapted to your university.)
 
-It contains some example content from my own thesis (university logo & name, chapter structure, example tables & data) so you can get a picture of how the [final document](thesis.pdf) might look.
+It contains some example content from my own thesis (university seal & name, chapter structure, example tables & data) so you can get a picture of how the [final document](thesis.pdf) might look.
 
 By default all sections are outsourced into their own numbered file in `src` to keep the project organized.
 
