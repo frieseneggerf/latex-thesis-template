@@ -1,0 +1,78 @@
+\section{Materials and Methods}
+\subsection{Materials}
+\subsubsection{Chemicals and Kits}
+All chemicals used were of analytical grade.
+
+\begin{table}[H]
+	\renewcommand{\arraystretch}{1.2}
+	\centering
+	\caption{List of chemicals and kits}
+	\label{table:chemicals-kits}
+	\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}l c m{5cm} } 
+		\hline
+		\textbf{Name} & \textbf{Product \#}  & \textbf{Supplier} \\ 
+		\hline
+		Chemical A & K1234 & Delta \newline Burlington, US-MA \\
+		Kit B\textregistered\ 100 & K4321 & Companyy \newline Karlsruhe, DE-BW \\
+		\hline
+	\end{tabular*}
+\end{table}
+
+\subsubsection{qPCR Primers}
+All primers are DNA oligos at 100\,µM.
+
+{
+\renewcommand{\arraystretch}{1.2}
+\centering
+
+\begin{longtable}{ 
+		>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{2cm} 
+		>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{3cm} 
+		m{9.7cm} }
+	\caption{List of primer sequences used for qPCR.}
+	\label{table:qpcr-primer}\\
+	\hline
+	\textbf{Gene} & \textbf{Direction} & \textbf{Sequence 5'\textrightarrow3'} 
+	\csvreader[head to column names]{data/example_primer.csv}{}{
+		\\\hline \textit{\gene}  & fwd \newline rev & {\ttfamily \expandafter\formatDNA\expandafter{\seqfwd} \newline \expandafter\formatDNA\expandafter{\seqrev}}
+	}
+	\\\hline
+\end{longtable}
+}
+
+
+\newpage
+\subsection{One Method}
+Some \ac{PCR}...
+
+\begin{table}[H]
+	\renewcommand{\arraystretch}{1.2}
+	\centering
+	\begin{tabular}{ c c c }
+		\hline
+		\textbf{Time [s]} & \textbf{Temperature [°C]} & \textbf{Step} \\
+		\hline
+		120  & 50 & \multirow{3}{*}{hold}\\
+		20 & 50\textrightarrow 95 & \\
+		120 & 95 & \\
+		\hline
+		3  & 95 & \multirow{5}{*}{PCR (40\texttimes)}\\
+		17 & 95\textrightarrow 58 & \\
+		5 & 58 & \\
+		1 & 58\textrightarrow 60 & \\
+		25 & 60 & \\
+		\hline
+		16 & 60\textrightarrow 95 & \multirow{6}{*}{melt curve}\\
+		15 & 95 & \\
+		16& 95\textrightarrow 60 & \\
+		60 & 60 & \\
+		117 & 60\textrightarrow 95 & \\
+		16 & 95 & \\
+		
+		\hline
+	\end{tabular}
+	\caption{qPCR protocol}
+	\label{table:qpcr-protocol}
+\end{table}
+
+\subsection{Another Method}
